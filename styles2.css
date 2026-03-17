@@ -1,0 +1,129 @@
+/* 1. PERUSASSETTELU */
+* {
+    box-sizing: border-box;
+}
+
+body { /* Perusasetukset koko sivulle */
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #eef1f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header { /* Yläosa */
+    background: #375879; 
+    color: white; 
+    padding: 20px; 
+}
+
+/* 2. LAYOUT JA NAVIGAATIO */
+  .layout {
+    display: grid;
+    grid-template-columns: 350px 2fr 350px;
+    gap: 40px;
+    max-width: 1800px;
+    margin: 40px auto;
+    padding: 0 40px;
+}
+
+
+nav, aside { /* Navigaatio ja sivupalkki */
+    height: fit-content;
+    background: #f4f6f8;         
+    border-radius: 15px;          
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);  
+    
+}
+
+nav a { /* Navigaatiolinkit */
+    display: block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+    
+}
+
+nav a:hover { /* Hover-efekti navigaatiolinkeille */
+    background-color: #3498db;
+    padding-left: 10px;
+    border-radius: 8px;
+   
+}
+
+
+/* 3. SISÄLTÖKORTIT */
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    
+
+}
+
+/* 4. OHJELMA-RUUDUKKO */
+.ohjelma-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.ohjelma-kortti { /* Ohjelma-kortti */
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.ohjelma-kortti:hover { /* Hover-efekti ohjelma-korteille */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-color: #3498db;
+    background: #ffffff;
+}
+
+.ohjelma-kortti strong { /* Ohjelma-korttien otsikot */
+    display: block;
+    color: #3498db;
+    font-size: 1.1rem;
+}
+
+/* 5. RESPONSIIVISUUS */
+@media (max-width: 1100px) {
+    .layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 15px;
+    }
+}
+
+footer { /* Alatiedot */
+    background: #2c3e50; 
+    color: white; 
+    padding: 20px; 
+    text-align: center; 
+    margin-top: auto;
+}
+
+footer a { /* Alatiedot linkit */
+    color: white;
+}
+
+li { /* Listaelementit */
+  margin-bottom: 10px;
+}
+
+main img { /* Pääsisällön kuva */
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
